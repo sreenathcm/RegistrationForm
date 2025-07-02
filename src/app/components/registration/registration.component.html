@@ -1,0 +1,47 @@
+<div>
+  <h3>Register</h3>
+  <p>Please fill the information below to register</p>
+  <form [formGroup]="registrationForm">
+    <div>
+      <label for="First Name">First Name</label>
+      <input formControlName="firstname" type="text" />
+    </div>
+
+    <div>
+      <label for="Last Name">Last Name</label>
+      <input formControlName="laststname" type="text" />
+    </div>
+
+    <div>
+      <label for="Age">Age</label>
+      <input formControlName="age" type="number" />
+    </div>
+
+    <div>
+      <label for="Email">Email</label>
+      <input formControlName="email" type="email" />
+    </div>
+
+    <div>
+      <label for="gender">Gender</label>
+      <select formControlName="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="predernottosay">Prefer Not to Say</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="Password">Password</label>
+      <input formControlName="password" type="password" />
+    </div>
+
+    
+    <div>
+      <label for="Confirm Password">Confirm Password</label>
+      <input formControlName="confirmPassword" type="password" />
+    </div>
+
+    <button (click)="onClicksubmit()" >submit</button>
+  </form>
+</div>
